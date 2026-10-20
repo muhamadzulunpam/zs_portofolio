@@ -1,0 +1,277 @@
+{
+  "visual": {
+    "navbar": {
+      "links": [
+        {
+          "label": "Experience",
+          "path": "#experience"
+        },
+        {
+          "label": "Projects",
+          "path": "#projects"
+        },
+        {
+          "label": "Education",
+          "path": "#education"
+        },
+        {
+          "label": "Certificate",
+          "path": "#certificate"
+        },
+        {
+          "label": "Contact Me",
+          "path": "#contact"
+        }
+      ]
+    },
+    "home": {
+      "sections": {
+        "banner": true,
+        "experience": true,
+        "project": true,
+        "education": true,
+        "testimonial": true
+      }
+    }
+  },
+  "personalInfo": {
+    "name": "Muhamad Zul ", 
+    "title": "Full-Stack Web Developer",
+    "location": "Pamulang, Tangerang Selatan, Banten, Indonesia",
+    "bio": "I build modern and responsive web applications using Laravel, PHP, React.js, and MySQL. I enjoy turning ideas into functional and user-friendly digital solutions."
+  },
+  "contactInfo": {
+    "email": "zulunpam2022@gmail.com",
+    "phone": "085111309091",
+    "linkedin": "https://www.linkedin.com/in/muhamad-zul-sa%E2%80%99ban-1bbb74363/",
+    "github": "https://github.com/muhamadzulunpam",
+    "instagram": "https://instagram.com/zulsaban09",
+    "twitter": "https://x.com/muhamadzul09",
+    "website": "#!"
+  },
+  "skills": {
+    "languages": [
+      "JavaScript",
+      "Python",
+      "Java",
+      "C++"
+    ],
+    "frameworks": [
+      "React",
+      "Node.js",
+      "Express",
+      "Django",
+      "Spring Boot"
+    ],
+    "databases": [
+      "MySQL",
+      "MongoDB",
+      "PostgreSQL"
+    ],
+    "tools": [
+      "Git",
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "AWS",
+      "GCP"
+    ]
+  },
+  "projects": [
+    {
+      "id": "1",
+      "title": "Mamnungs POS",
+      "description": "Aplikasi kasir (Point of Sale) berbasis web untuk usaha UMKM Es Teler. Mendukung pembayaran tunai dan QRIS (Midtrans), struk cetak, laporan penjualan, manajemen produk dan pengguna, serta log aktivitas dengan akses berdasarkan role admin dan kasir.",
+      "technologies": [
+        "Laravel",
+        "Vue.js",
+        "Inertia.js",
+        "Bootstrap",
+        "MySQL",
+        "Midtrans"
+      ],
+      "live_url": "https://drive.google.com/file/d/10Q6Zowx7aLYK5ZYYzFJYc6uripNZZA96/view?usp=sharing",
+      "code_repo_url": "https://github.com/muhamadzulunpam/mamnungs",
+      "cover": "/assets/projek/mamnungs.png"
+    },
+    {
+      "id": "2",
+      "title": "Helpdesk Ticketing System",
+      "description": "Sistem tiket bantuan untuk mengelola keluhan dan permintaan layanan dalam satu platform. Mendukung tiga peran (admin, agent, user), alur status tiket, penugasan, komentar dengan catatan internal, lampiran file, notifikasi email, dan dashboard statistik.",
+      "technologies": [
+        "Laravel",
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "MySQL"
+      ],
+      "live_url": "https://github.com/muhamadzulunpam/helpdesk-web",
+      "code_repo_url": "https://github.com/muhamadzulunpam/helpdesk-management-api",
+      "cover": "/assets/projek/helpdesk.jpeg"
+    },
+    {
+      "id": "3",
+      "title": "Self-Order QR Menu",
+      "description": "Sistem pemesanan mandiri untuk restoran: pembeli scan QR code di meja, memilih menu dari HP, lalu membayar lewat Midtrans tanpa perlu pelayan. Pesanan yang sudah dibayar langsung diteruskan ke dapur secara real-time, lengkap dengan pengelolaan status pesanan dan akses berbasis peran (admin, kasir, dapur).",
+      "technologies": [
+        "Laravel",
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "MySQL",
+        "Laravel Reverb",
+        "Midtrans"
+      ],
+      "live_url": "https://github.com/muhamadzulunpam/self-order-web",
+      "code_repo_url": "https://github.com/muhamadzulunpam/self-order-api",
+      "cover": "/assets/projek/selforder.jpeg"
+    },
+    {
+      "id": "4",
+      "title": "Damkar GIS",
+      "description": "Sistem Informasi Geografis (GIS) Pemadam Kebakaran dan Penyelamatan Kota Tangerang Selatan. Aplikasi ini menyediakan manajemen data kejadian kebakaran dan penyelamatan, visualisasi peta kerawanan wilayah, analisis clustering menggunakan algoritma K-Means, serta laporan analisis berdasarkan periode yang dapat diunduh dalam format PDF dan Excel.",
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "Vue.js",
+        "Bootstrap",
+        "MySQL",
+        "GIS",
+        "K-Means Clustering"
+      ],
+      "live_url": "https://drive.google.com/file/d/1PnQoxA93UXVoLOMmo_aMKDK3193WACgt/view?usp=sharing",
+      "code_repo_url": "https://github.com/muhamadzulunpam/damkar-gis",
+      "cover": "/assets/projek/damkar-gis.jpeg"
+    },
+    {
+      "id": "5",
+      "title": "Inventory Information System",
+      "description": "Sistem manajemen inventaris yang dirancang untuk mempermudah pengelolaan stok barang. Sistem ini memungkinkan pengelolaan produk, supplier, barang masuk, barang keluar, dan laporan inventaris.",
+      "technologies": [
+        "Codeigniter",
+        "PHP",
+        "MySQL",
+        "Bootstrap"
+      ],
+      "live_url": "https://drive.google.com/file/d/1cefeil6mcoGJ5x-srLxTz55Wcv2DaOoK/view?usp=sharing",
+      "code_repo_url": "https://github.com/muhamadzulunpam/inventori-barang",
+      "cover": "/assets/projek/inventory.jpeg"
+    },
+    {
+      "id": "6",
+      "title": "PPDB TK Berbasis Web",
+      "description": "Mengembangkan sistem PPDB berbasis web dengan fitur pendaftaran, pengelolaan data calon siswa, verifikasi, dan informasi penerimaan.",
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "Bootstrap"
+      ],
+      "live_url": "https://drive.google.com/file/d/1DCZnyb8ed3Rd7HOGeEm5SBAYyDrX8c4I/view?usp=drive_link",
+      "code_repo_url": "https://github.com/muhamadzulunpam/ppdb-tk",
+      "cover": "/assets/projek/ppdb.jpeg"
+    }
+  ],
+  "workExperience": [
+    {
+      "id": "1",
+      "company": "PT. Intect Teknologi Indonesia",
+      "companyWebsite": "https://intect.id/",
+      "role": "Full Stack Web Developer",
+      "startDate": "Jan 2026",
+      "endDate": "Jul 2026",
+      "technologies": [
+        "Laravel",
+        "Vue.js",
+        "MySQL",
+        "TailwindCSS"
+      ],
+      "keyResponsibilities": [
+        "Mengembangkan sistem ERP berbasis web yang mengintegrasikan modul purchasing, inventory, production, sales, dan service ticket",
+        "Bertanggung jawab pada modul inventory, purchasing, user management (5 role), database design, dan reporting.",
+        "Berkontribusi dalam pengembangan sistem ERP yang mengintegrasikan lima modul utama perusahaan."
+      ]
+    },
+    {
+      "id": "2",
+      "company": "Universitas Pamulang",
+      "companyWebsite": "https://unpam.ac.id/",
+      "role": "Intern Web Developer",
+      "startDate": "Aug 2024",
+      "endDate": "Feb 2025",
+      "technologies": [
+        "Laravel",
+        "React",
+        "MySQL",
+        "TailwindCSS"
+      ],
+      "keyResponsibilities": [
+        "Mengembangkan 3 modul utama aplikasi web internal universitas (modul pengajuan, monitoring, dan pelaporan).",
+        "Menyusun laporan kinerja harian dan mingguan kepada Kepala Bidang.",
+        "Melakukan debugging dan perbaikan sistem berbasis Laravel dan MySQL."
+      ]
+    },
+    {
+      "id": 3,
+      "role": "Ketua Umum",
+      "company": "IT Cyber Community",
+      "companyWebsite": "https://itcybercommunity.com/",
+      "startDate": "Jan 2025",
+      "endDate": "Jul 2025",
+      "keyResponsibilities": [
+        "Memimpin 5 divisi dan mengoordinasikan 12+ program kerja selama periode kepemimpinan.",
+        "Meningkatkan partisipasi anggota dalam kegiatan organisasi hingga 30% dibanding periode sebelumnya.",
+        "Bertanggung jawab atas komunikasi internal dan eksternal, serta pelaporan kegiatan kepada pembina."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "1",
+      "institution": "Universitas Pamulang",
+      "degree": "Bachelor of Science in Informatics Engineering",
+      "description": "Mempelajari pemrograman, pengembangan aplikasi berbasis web, basis data, rekayasa perangkat lunak, serta analisis dan perancangan sistem. Mengembangkan berbagai project menggunakan teknologi seperti PHP, Laravel, MySQL, JavaScript, dan React.js.",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2026"
+    },
+    {
+      "id": "2",
+      "institution": "SMK PGRI 13 CIKUPA",
+      "degree": "Computer and Network Engineering",
+      "description": "Mempelajari jaringan komputer, instalasi dan konfigurasi jaringan, troubleshooting perangkat komputer, serta dasar administrasi sistem jaringan. Mengembangkan keterampilan teknis melalui praktik langsung dan proyek-proyek berbasis jaringan.",
+      "startDate": "Sep 2016",
+      "endDate": "Sep 2019"
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "name": "Junior Web Developer",
+      "institution": "LSP Universitas Pamulang - BNSP",
+      "image": "/assets/certifications/juniorwebdeveloper.jpeg",
+      "year": "2024",
+      "validUntil": "13 Feb 2029",
+      "credentialId": "LSI18",
+      "status": "Kompeten",
+      "link": "https://drive.google.com/file/d/1tiMFGds6gwucoEzal7CNSoxtBkhAeW0Z/view?usp=drivesdk"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "1",
+      "name": "Jane Smith",
+      "avatar": "/assets/testimonial_1_avatar.jpg",
+      "title": "Project Manager",
+      "company": "Tech Solutions Inc.",
+      "feedback": "John is a fantastic developer who consistently delivers high-quality work. His ability to solve complex problems is impressive."
+    },
+    {
+      "id": "2",
+      "name": "Mike Johnson",
+      "avatar": "/assets/testimonial_2_avatar.jpg",
+      "title": "CEO",
+      "company": "Web Innovators LLC",
+      "feedback": "John is a highly skilled developer who brings a lot of value to our projects. His expertise in full stack development is top-notch."
+    }
+  ]
+}

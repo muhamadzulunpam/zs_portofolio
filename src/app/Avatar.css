@@ -1,0 +1,277 @@
+/* ===== AVATAR ANIMATIONS (RESPONSIVE) ===== */
+
+/* Base: Mobile First */
+.avatar-wrapper {
+  position: relative;
+  width: min(200px, 70vw); /* Ukuran fleksibel di mobile */
+  height: min(200px, 70vw);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Gradient Ring - Mengikuti ukuran avatar */
+.avatar-ring {
+  position: absolute;
+  width: calc(100% + 40px); /* 20px lebih besar dari avatar */
+  height: calc(100% + 40px);
+  max-width: 360px;
+  max-height: 360px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #57b3fe,
+    #57b3fe,
+    #48dbfb,
+    #a29bfe,
+    #57b3fe
+  );
+  animation: spinRing 6s linear infinite;
+  filter: blur(8px);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+@keyframes spinRing {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Container Avatar */
+.avatar-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-style: preserve-3d;
+  perspective: 800px;
+  cursor: pointer;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: floatAvatar 4s ease-in-out infinite;
+}
+
+@keyframes floatAvatar {
+  0%, 100% { transform: translateY(0px) rotateY(var(--rot, 0deg)); }
+  50% { transform: translateY(-15px) rotateY(var(--rot, 0deg)); }
+}
+
+/* Hover efek - Lebih subtle di mobile */
+.avatar-container:hover {
+  transform: scale(1.08) rotateY(15deg) rotateX(5deg) !important;
+  box-shadow: 0 30px 80px rgba(72, 219, 251, 0.4);
+  animation-play-state: paused;
+}
+
+.avatar-container:hover .avatar-image {
+  transform: scale(1.05);
+}
+
+.avatar-container:hover .avatar-overlay {
+  opacity: 1;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.6s ease;
+  backface-visibility: hidden;
+}
+
+/* Overlay hover - Lebih kecil di mobile */
+.avatar-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(2rem, 5vw, 3rem); /* Responsive font size */
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+/* Particle efek - Sembunyikan di mobile sangat kecil */
+.avatar-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.avatar-particles span {
+  position: absolute;
+  width: clamp(4px, 1vw, 6px);
+  height: clamp(4px, 1vw, 6px);
+  background: #48dbfb;
+  border-radius: 50%;
+  animation: particleFloat 3s infinite alternate;
+}
+
+.avatar-particles span:nth-child(1) {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+  background: #57b3fe;
+}
+.avatar-particles span:nth-child(2) {
+  top: 80%;
+  right: 5%;
+  animation-delay: 1s;
+  background: #57b3fe;
+}
+.avatar-particles span:nth-child(3) {
+  bottom: 10%;
+  left: 50%;
+  animation-delay: 2s;
+  background: #a29bfe;
+}
+
+@keyframes particleFloat {
+  0% { transform: translate(0, 0) scale(1); opacity: 0; }
+  100% { transform: translate(20px, -30px) scale(1.5); opacity: 1; }
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Tablet (640px - 1023px) */
+@media (min-width: 640px) {
+  .avatar-wrapper {
+    width: min(200px, 50vw);
+    height: min(200px, 50vw);
+  }
+  
+  .avatar-ring {
+    width: calc(100% + 50px);
+    height: calc(100% + 50px);
+  }
+}
+
+/* Desktop (1024px ke atas) */
+@media (min-width: 1024px) {
+  .avatar-wrapper {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .avatar-ring {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+/* Desktop Large (1440px ke atas) - Opsional lebih besar */
+@media (min-width: 1440px) {
+  .avatar-wrapper {
+    width: 320px;
+    height: 320px;
+  }
+  
+  .avatar-ring {
+    width: 360px;
+    height: 360px;
+  }
+}
+
+/* ===== TYPING EFFECT (Responsive) ===== */
+.typing-text {
+  display: inline-block;
+  border-right: clamp(2px, 0.3vw, 3px) solid #48dbfb;
+  animation: blink 0.8s step-end infinite;
+  padding-right: 5px;
+  font-size: clamp(1.2rem, 3vw, 2rem); /* Responsive */
+}
+
+@keyframes blink {
+  0%, 100% { border-color: #48dbfb; }
+  50% { border-color: transparent; }
+}
+
+/* ===== SOCIAL BUTTONS HOVER (Responsive) ===== */
+.social-button {
+  transition: all 0.3s ease;
+  width: clamp(36px, 5vw, 44px);
+  height: clamp(36px, 5vw, 44px);
+}
+
+.social-button:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 10px 30px rgba(72, 219, 251, 0.3);
+}
+
+/* ===== TEXT GRADIENT ANIMATION (Responsive) ===== */
+.gradient-text {
+  background: linear-gradient(-45deg, #57b3fe, #57b3fe, #48dbfb, #a29bfe);
+  background-size: 300% 300%;
+  animation: gradientShift 4s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: clamp(1.8rem, 4vw, 3rem); /* Responsive */
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== TITLE & SUBTITLE (Responsive) ===== */
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+/* ===== BIO TEXT (Responsive) ===== */
+.hero-bio {
+  font-size: clamp(0.9rem, 1.5vw, 1.125rem);
+  max-width: min(100%, 600px);
+}
+
+/* ===== TECH BADGES (Responsive) ===== */
+.tech-badge {
+  font-size: clamp(0.7rem, 1vw, 0.875rem);
+  padding: clamp(2px 6px, 0.5vw, 4px 12px);
+}
+
+/* ===== RESPONSIVE LAYOUT ===== */
+@media (max-width: 640px) {
+  .avatar-container:hover {
+    transform: scale(1.05) rotateY(5deg) rotateX(2deg) !important; /* Lebih subtle di mobile */
+  }
+  
+  .avatar-overlay {
+    font-size: 2rem; /* Lebih kecil di mobile */
+  }
+  
+  .avatar-particles span {
+    display: none; /* Sembunyikan particle di mobile untuk performa */
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  .avatar-container {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  }
+  
+  .avatar-container:hover {
+    box-shadow: 0 30px 80px rgba(72, 219, 251, 0.3);
+  }
+}
