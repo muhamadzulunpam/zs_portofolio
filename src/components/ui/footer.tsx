@@ -17,14 +17,14 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 text-gray-800 py-12 mt-12 border-t border-gray-200">
+    <footer className="bg-gray-100 text-gray-800 py-12 mt-12 border-t border-gray-200 dark:bg-gray-950 dark:text-gray-200 dark:border-gray-800 transition-colors duration-300">
       <div className="container max-w-5xl mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* Brand / About */}
           <div>
             <Image
-                        src="/assets/logo2.png"
+                        src="/assets/logo1.jpeg"
                         height={60}
                         width={60}
                         alt={"devfolio logo"}
@@ -38,7 +38,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-gray-800 text-sm uppercase tracking-wider mb-4">
+            <h3 className="font-semibold text-gray-800 dark:text-gray-100 text-sm uppercase tracking-wider mb-4">
               NAVIGASI
             </h3>
             <ul className="space-y-2">
@@ -58,12 +58,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/certificate" className="text-gray-600 hover:text-gray-900 transition-colors text-sm flex items-center gap-2">
+                <Link href="/#certificate" className="text-gray-600 hover:text-gray-900 transition-colors text-sm flex items-center gap-2">
                   Certificate
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors text-sm flex items-center gap-2">
+                <Link href="/#contact" className="text-gray-600 hover:text-gray-900 transition-colors text-sm flex items-center gap-2">
                   Contact Me
                 </Link>
               </li>
@@ -72,7 +72,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-gray-800 text-sm uppercase tracking-wider mb-4">
+            <h3 className="font-semibold text-gray-800 dark:text-gray-100 text-sm uppercase tracking-wider mb-4">
               KONTAK
             </h3>
             <ul className="space-y-3">
@@ -98,7 +98,7 @@ export default function Footer() {
 
           {/* Social Media */}
           <div>
-            <h3 className="font-semibold text-gray-800 text-sm uppercase tracking-wider mb-4">
+            <h3 className="font-semibold text-gray-800 dark:text-gray-100 text-sm uppercase tracking-wider mb-4">
               MEDIA SOSIAL
             </h3>
             <div className="flex gap-3 flex-wrap">
